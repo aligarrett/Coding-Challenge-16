@@ -4,7 +4,153 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Vite Clothing Store</title>
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #fce4ec; /* Light pink background */
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        flex-direction: column;
+        padding: 20px;
+        overflow-x: hidden; /* Prevent horizontal overflow */
+      }
+
+      .container {
+        text-align: center;
+        width: 100%;
+        max-width: 800px; /* Ensure the container doesn't stretch too wide */
+      }
+
+      h1, h2, h3 {
+        color: #d81b60; /* Bold pink color for headings */
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the items */
+        gap: 15px; /* Space between product items */
+      }
+
+      button {
+        background-color: #ec407a; /* Medium pink button */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #f06292; /* Lighter pink on hover */
+      }
+
+      /* Styling the product list */
+      .product-item {
+        background-color: white;
+        padding: 15px; /* Reduced padding for smaller boxes */
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        width: 100%;
+        max-width: 220px; /* Reduced max-width for smaller product boxes */
+        box-sizing: border-box;
+        margin-bottom: 15px;
+      }
+
+      .product-item h3 {
+        font-size: 1.3rem; /* Smaller font size for the product title */
+        margin-bottom: 8px;
+        color: #d81b60; /* Pink color for product titles */
+      }
+
+      .product-item p {
+        margin-bottom: 6px; /* Reduced margin for description */
+        font-size: 0.9rem; /* Smaller text for the description */
+      }
+
+      /* Add Product Form Styling */
+      form {
+        background-color: white;
+        padding: 10px; /* Reduced padding for a much smaller form */
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 300px; /* Smaller form width */
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center form elements */
+        margin-bottom: 15px;
+      }
+
+      form div {
+        margin-bottom: 8px; /* Even smaller space between form elements */
+        width: 100%;
+      }
+
+      form label {
+        font-weight: bold;
+        color: #d81b60; /* Pink for labels */
+        font-size: 0.8rem; /* Even smaller label font size */
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 6px; /* Much smaller padding */
+        border: 1px solid #f8bbd0; /* Light pink border */
+        border-radius: 5px;
+        font-size: 0.8rem; /* Even smaller font size for inputs */
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 50px; /* Even smaller text area height */
+      }
+
+      /* Responsive Layout */
+      @media (max-width: 768px) {
+        .product-item {
+          max-width: 90%; /* Adjust for smaller screens */
+        }
+
+        form {
+          max-width: 280px; /* Slightly smaller form width for small screens */
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 2rem; /* Smaller title on small screens */
+        }
+
+        .product-item {
+          max-width: 100%; /* Full-width products on very small screens */
+        }
+
+        ul {
+          flex-direction: column;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
