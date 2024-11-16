@@ -6,7 +6,7 @@ const ProductList = ({ products }) => {
     <div>
       <h2>Available Products</h2>
       <ul>
-        {/* Use map to render a ProductItem for each product */}
+       {/* Task 5: Use map to render a ProductItem for each product with a unique key */}
         {products.map((product) => (
           <ProductItem
             key={product.id}  // Use a unique key for each product
