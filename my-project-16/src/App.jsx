@@ -24,6 +24,7 @@ const App = () => {
       <h1>Clothing Store</h1>
       {/* Pass the list of products to ProductList and the addProduct function to AddProductForm */}
       <ProductList products={products} />
+      {/* Task 7: Pass the addProduct function to AddProductForm as a prop */}
       <AddProductForm addProduct={addProduct} />
     </div>
   );
